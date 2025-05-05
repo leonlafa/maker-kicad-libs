@@ -8,7 +8,6 @@
 * **Component:** **[Full Component Name/Number, e.g., 74LVC4066BQ]**
 * **Datasheets:**
   * [**Mandatory:** Link to component datasheet showing package type (e.g., 74LVC4066.pdf)]
-  * [**Mandatory:** Link to package drawing with dimensions (e.g., SOT762-1.pdf)]
 
 ## Verification Checklist
 
