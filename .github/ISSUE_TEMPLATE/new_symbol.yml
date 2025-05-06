@@ -1,0 +1,42 @@
+name: "New KiCad Symbol"
+description: Specify requirements for a new component symbol.
+title: "[Symbol Request]: <Component Name>"
+labels: ["symbol", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Define the requirements for the new KiCad symbol below.
+  - type: input
+    id: component-name
+    attributes:
+      label: Component Name/Number
+      description: "Specify the full component name/number (e.g. 74LVC4066BQ, ATmega328P-AU)."
+      placeholder: "e.g. 74LVC4066BQ"
+    validations:
+      required: true
+  - type: textarea
+    id: datasheets
+    attributes:
+      label: Datasheet Links
+      description: |
+        Provide direct links to the component datasheet(s) showing pinout. At least one is mandatory.
+        *(Paste one link per line)*
+      placeholder: |
+        https://www.nxp.com/docs/en/data-sheet/74LVC_LVCH4066A.pdf
+    validations:
+      required: true
+  - type: textarea
+    id: symbol-details
+    attributes:
+      label: Symbol Specific Details (Optional)
+      description: "Any specific requirements? (e.g. Number of units, pin grouping, special pin types etc.)"
+      placeholder: "e.g. Needs 5 units (4 switches + power), group pins logically."
+  - type: markdown
+    attributes:
+      value: |
+        ## Acceptance Criteria
+        * Symbol created matching datasheet pinout accurately.
+        * Symbol fields (Reference, Value, Footprint link [if applicable], Datasheet link) correctly populated according to library standards.
+        * Symbol adheres to KiCad Library Convention (KLC) and project-specific standards.
+        * Pin types (Input, Output, Power, Passive, etc.) correctly assigned.
